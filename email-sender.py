@@ -12,7 +12,7 @@ email['subject'] = 'See you in Paris?'
 
 # email.set_content('28 boulevard des Capucines. July 07 at 19:30.')
 
-email.set_content(html.substitute({'name': ''}), 'html')
+email.set_content(html.substitute({'address': '28 boulevard des Capucines', 'day': 'July 07', 'hour': '19:30'}), 'html')
 
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
   smtp.ehlo()
